@@ -1,0 +1,742 @@
+/* GENERAL */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background-color: #121212;
+  color: #e0e0e0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+p {
+  color: #b0b0b0;
+}
+
+/* TRANSITION */
+a,
+.btn {
+  transition: all 300ms ease;
+}
+
+/* DESKTOP NAV */
+nav,
+.nav-links {
+  display: flex;
+}
+
+nav {
+  justify-content: space-around;
+  align-items: center;
+  height: 17vh;
+  background-color: #1e1e1e;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.nav-links {
+  gap: 2rem;
+  list-style: none;
+  font-size: 1.5rem;
+}
+
+a {
+  color: #e0e0e0;
+  text-decoration: none;
+  text-decoration-color: white;
+}
+
+a:hover,
+.nav-links a.active {
+  color: #bb86fc;
+  text-decoration: underline;
+  text-underline-offset: 0.5rem;
+  text-decoration-color: #bb86fc;
+}
+
+.logo {
+  font-size: 2rem;
+  color: #e0e0e0;
+}
+
+.logo:hover {
+  cursor: default;
+}
+
+/* HAMBURGER MENU */
+#hamburger-nav {
+  display: none;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.hamburger-menu {
+  position: relative;
+  display: inline-block;
+}
+
+.hamburger-icon {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 24px;
+  width: 30px;
+  cursor: pointer;
+}
+
+.hamburger-icon span {
+  width: 100%;
+  height: 2px;
+  background-color: #e0e0e0;
+  transition: all 0.3s ease-in-out;
+}
+
+.menu-links {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  background-color: #1e1e1e;
+  width: fit-content;
+  max-height: 0;
+  overflow: hidden;
+  transition: all 0.3s ease-in-out;
+  border-radius: 0.5rem;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.menu-links a {
+  display: block;
+  padding: 10px 20px;
+  text-align: center;
+  font-size: 1.5rem;
+  color: #e0e0e0;
+  text-decoration: none;
+  transition: all 0.3s ease-in-out;
+}
+
+.menu-links a:hover {
+  background-color: rgba(187, 134, 252, 0.1);
+  color: #bb86fc;
+  text-decoration: none;
+}
+
+.menu-links li {
+  list-style: none;
+}
+
+.menu-links.open {
+  max-height: 350px;
+}
+
+.hamburger-icon.open span:first-child {
+  transform: rotate(45deg) translate(10px, 5px);
+}
+
+.hamburger-icon.open span:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger-icon.open span:last-child {
+  transform: rotate(-45deg) translate(10px, -5px);
+}
+
+/* SECTIONS */
+section {
+  padding: 10vh 0;
+  margin: 0 10rem;
+  min-height: 73vh;
+  box-sizing: border-box;
+}
+
+.section-container {
+  display: flex;
+  gap: 4rem;
+  height: 100%;
+}
+
+.section__pic-container {
+  display: flex;
+  height: 400px;
+  width: 400px;
+}
+
+.section__text {
+  align-self: center;
+  text-align: center;
+}
+
+.section__text p {
+  font-weight: 500;
+}
+
+.section__text__p1 {
+  text-align: center;
+  font-size: 1.25rem;
+  margin-bottom: 0.5rem;
+  color: #bb86fc;
+}
+
+.section__text__p2 {
+  font-size: 1.75rem;
+  margin-bottom: 1rem;
+  color: #e0e0e0;
+}
+
+.title {
+  font-size: 3rem;
+  text-align: center;
+  color: #e0e0e0;
+  margin-bottom: 2rem;
+}
+
+#socials-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 1rem;
+  gap: 1rem;
+}
+
+/* ICONS */
+.icon {
+  cursor: pointer;
+  height: 2rem;
+}
+
+/* BUTTONS */
+.btn-container {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.btn {
+  font-weight: 500;
+  padding: 0.75rem 1.5rem;
+  width: auto;
+  border-radius: 0.5rem;
+  border: 1px solid #bb86fc;
+  color: #bb86fc;
+  background: transparent;
+  cursor: pointer;
+}
+
+.btn:hover {
+  background: rgba(187, 134, 252, 0.1);
+}
+
+/* Filled button */
+.btn-color-1 {
+  background: #bb86fc;
+  color: #121212;
+  font-weight: 600;
+}
+
+.btn-color-1:hover {
+  background: #bb86fc;
+  opacity: 0.9;
+}
+
+/* Outline button (default .btn style) */
+.btn-color-2 {
+  /* Inherits default .btn styles */
+}
+
+/* PROFILE SECTION (HOMEPAGE) - LAYOUT FIX */
+#profile {
+  display: grid; /* Use CSS Grid for layout */
+  grid-template-columns: auto 1fr; /* Image width auto, text takes remaining space */
+  align-items: center; /* Vertically align items in the grid */
+  gap: 4rem; /* Space between image and text */
+  padding: 10vh 0;
+  margin: 0 10rem;
+  min-height: 73vh;
+}
+
+#profile .section__pic-container {
+  justify-self: start; /* Align image to the left */
+  height: 350px; /* Adjust size if needed */
+  width: 350px; /* Adjust size if needed */
+}
+
+/* Specific styles for the profile image on the index page */
+#profile .section__pic-container img {
+  border-radius: 50%; /* Makes profile pic circular */
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Ensures image fills the circle without distortion */
+  aspect-ratio: 1/1; /* Explicitly enforce square aspect ratio for container */
+}
+
+
+#profile .section__text {
+  text-align: left; /* Align text to the left */
+}
+#profile .section__text .section__text__p1,
+#profile .section__text .section__text__p2,
+#profile .section__text .title {
+  text-align: left; /* Ensure all text elements are left-aligned */
+}
+#profile .btn-container,
+#profile #socials-container {
+  justify-content: flex-start; /* Align buttons and socials to the left */
+}
+
+
+/* DETAILS CONTAINERS (Used for About, Skills, Projects, Experience) */
+.about-containers {
+  display: flex;
+  gap: 2rem;
+  margin-bottom: 2rem;
+  margin-top: 2rem;
+}
+
+.about-details-container {
+  justify-content: center;
+  flex-direction: column;
+}
+
+.about-pic {
+  border-radius: 2rem; /* Kept original rounded rectangle style */
+}
+
+.details-container {
+  padding: 1.5rem;
+  flex: 1;
+  background: #1e1e1e;
+  border-radius: 1rem;
+  border: 1px solid #333333;
+  text-align: center;
+}
+
+.text-container {
+  text-align: left;
+  line-height: 1.6;
+}
+
+/* EXPERIENCE PAGE */
+.experience-details-container {
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+}
+
+.experience-card {
+  display: flex;
+  align-items: flex-start; /* Aligns logo and text to the top */
+  gap: 2rem; /* Space between logo and text */
+  padding: 1.5rem;
+  background: #1e1e1e;
+  border-radius: 1rem;
+  border: 1px solid #333333;
+  text-align: left;
+}
+.experience-card h3 {
+  color: #e0e0e0;
+  font-size: 1.5rem;
+  margin-bottom: 0.25rem;
+}
+.experience-card .sub-title {
+  color: #bb86fc;
+  font-size: 1.1rem;
+  font-weight: 500;
+  margin-bottom: 0.5rem;
+}
+.experience-card .dates {
+  color: #b0b0b0;
+  font-size: 0.9rem;
+  margin-bottom: 1rem;
+}
+.experience-card ul {
+  list-style-position: outside;
+  margin-left: 1.2rem;
+}
+.experience-card ul li {
+  margin-bottom: 0.5rem;
+  color: #b0b0b0;
+  line-height: 1.5;
+}
+
+/* SKILLS PAGE */
+.experience-sub-title {
+  color: #bb86fc;
+  font-weight: 600;
+  font-size: 1.75rem;
+  margin-bottom: 2rem;
+}
+
+.skills-list {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  gap: 1.5rem;
+}
+
+.skills-list div h3 {
+  color: #e0e0e0;
+  font-size: 1.1rem;
+  margin-bottom: 0.25rem;
+}
+
+.skills-list div p {
+  color: #b0b0b0;
+  font-size: 0.9rem;
+  line-height: 1.4;
+}
+
+/* PROJECTS SECTION */
+.color-container {
+  border-color: #333333;
+  background: #1e1e1e;
+}
+
+.project-img {
+  border-radius: 2rem;
+  width: 90%;
+  height: 90%;
+}
+
+.project-title {
+  margin: 1rem;
+  color: #bb86fc;
+  font-size: 1.5rem;
+}
+
+.project-btn {
+  color: #bb86fc;
+  border-color: #bb86fc;
+}
+
+.project-btn:hover {
+  background: rgba(187, 134, 252, 0.1);
+}
+
+.project-card-container {
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+}
+
+.project-card ul {
+  list-style-position: outside;
+  margin-left: 1.2rem;
+  text-align: left;
+  margin-top: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.project-card ul li {
+  color: #b0b0b0;
+  margin-bottom: 0.5rem;
+  line-height: 1.5;
+}
+
+/* CONTACT */
+#contact {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  min-height: 70vh;
+}
+
+.contact-info-upper-container {
+  display: flex;
+  justify-content: center;
+  border-radius: 2rem;
+  border: 1px solid #333333;
+  background: #1e1e1e;
+  margin: 2rem auto;
+  padding: 0.5rem;
+}
+
+.contact-info-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  margin: 1rem;
+}
+
+.contact-info-container p {
+  font-size: larger;
+}
+
+.contact-icon {
+  cursor: default;
+}
+
+.email-icon {
+  height: 2.5rem;
+}
+
+/* --- REPLACE all existing footer styles with this --- */
+
+/* FOOTER SECTION */
+
+footer {
+  height: auto; /* Remove fixed height */
+  padding: 2rem 1rem 1.5rem; /* Add some padding */
+  text-align: center;
+  margin: 0 1rem;
+}
+
+.footer-socials {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.footer-icon {
+  height: 1.5rem; /* Make footer icons a bit smaller */
+  opacity: 0.7;
+  transition: opacity 300ms ease;
+}
+
+.footer-icon:hover {
+  opacity: 1;
+}
+
+.footer-text {
+  color: #b0b0b0;
+  font-size: 0.9rem;
+  margin-bottom: 0.5rem;
+}
+
+footer p {
+  text-align: center;
+  color: #888888; /* Make copyright slightly dimmer */
+  font-size: 0.8rem;
+}
+
+/* MEDIA QUERIES FOR PROFILE SECTION */
+@media screen and (max-width: 1200px) {
+  #profile {
+    grid-template-columns: 1fr; /* Stack vertically on smaller screens */
+    gap: 2rem;
+    padding-top: 5vh;
+  }
+  #profile .section__pic-container {
+    justify-self: center; /* Center image when stacked */
+  }
+  #profile .section__text {
+    text-align: center; /* Center text when stacked */
+  }
+  #profile .section__text .section__text__p1,
+  #profile .section__text .section__text__p2,
+  #profile .section__text .title {
+    text-align: center;
+  }
+  #profile .btn-container,
+  #profile #socials-container {
+    justify-content: center; /* Center buttons and socials when stacked */
+  }
+
+  /* General responsive adjustments */
+  #desktop-nav {
+    display: none;
+  }
+  #hamburger-nav {
+    display: flex;
+  }
+  #experience,
+  .experience-details-container {
+    margin-top: 2rem;
+  }
+  .section-container {
+    display: block;
+  }
+
+  section,
+  .section-container {
+    height: fit-content;
+  }
+  section {
+    margin: 0 5%;
+  }
+  /* Adjusted section__pic-container for about page and smaller screens */
+  .section__pic-container {
+    width: 275px;
+    height: 275px;
+    margin: 0 auto 2rem; /* Center images on smaller screens */
+  }
+  .about-containers {
+    margin-top: 0;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  #contact,
+  footer {
+    height: 40vh;
+  }
+  article {
+    font-size: 1rem;
+  }
+  footer nav {
+    height: fit-content;
+    margin-bottom: 2rem;
+  }
+  .about-containers,
+  .contact-info-upper-container,
+  .btn-container {
+    flex-wrap: wrap;
+  }
+  .contact-info-container {
+    margin: 0;
+  }
+  .contact-info-container p,
+  .nav-links li a {
+    font-size: 1rem;
+  }
+  .experience-sub-title {
+    font-size: 1.25rem;
+  }
+  .logo {
+    font-size: 1.5rem;
+  }
+  .nav-links {
+    flex-direction: column;
+    gap: 0.5rem;
+    text-align: center;
+  }
+  /* Smaller picture container for very small screens */
+  .section__pic-container {
+    width: auto;
+    height: 46vw;
+    justify-content: center;
+  }
+  #profile .section__pic-container {
+    height: 250px; /* Adjust size for very small screens specifically for profile */
+    width: 250px;
+  }
+  .section__text__p2 {
+    font-size: 1.25rem;
+  }
+  .title {
+    font-size: 2rem;
+  }
+  .text-container {
+    text-align: justify;
+  }
+}
+
+/* Contact Form Styles */
+.form-container {
+  display: flex;
+  flex-direction: column;
+  max-width: 1000px; /* Widen the form */
+  margin: 2rem auto;
+  padding: 2.5rem; /* Add a bit more padding */
+  background: #1e1e1e;
+  border: 1px solid #333333;
+  border-radius: 1rem;
+}
+
+/* New rule for side-by-side fields */
+.form-row {
+  display: flex;
+  flex-direction: row;
+  gap: 1.5rem;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1.5rem;
+}
+
+.form-group label {
+  margin-bottom: 0.5rem;
+  color: #e0e0e0;
+  font-weight: 500;
+  text-align: left;
+}
+
+.form-group input,
+.form-group textarea {
+  padding: 0.75rem;
+  font-family: "Poppins", sans-serif;
+  background: #121212;
+  border: 1px solid #333333;
+  border-radius: 0.5rem;
+  color: #e0e0e0;
+  font-size: 1rem;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  outline: none;
+  border-color: #bb86fc;
+}
+
+.form-submit-btn {
+  width: 100%;
+  padding: 1rem;
+  font-size: 1.1rem;
+  margin-top: 1rem;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 700px) {
+  .form-row {
+    flex-direction: column; /* Stack name and email on small screens */
+    gap: 0;
+  }
+}
+
+/* Project Image Container */
+.project-img-container {
+  width: 100%;
+  max-height: 400px; /* Set a max height for the image */
+  overflow: hidden; /* Hide any overflow */
+  border-radius: 1rem; /* Match the card's border radius */
+  margin-bottom: 1.5rem; /* Space between image and title */
+  border: 1px solid #333333; /* Add a subtle border */
+}
+
+.project-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Crop image to fit, not distort */
+  transition: transform 300ms ease;
+  display: block; /* Fixes any small gaps */
+}
+
+/* Add a slight zoom effect on hover */
+.project-card:hover .project-img {
+  transform: scale(1.05);
+}
+
+/* Experience Page Logo Styles */
+.experience-img-container {
+  width: 120px; /* Fixed width for the logo container */
+  flex-shrink: 0; /* Prevents the container from shrinking */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.5rem;
+  background: #f4f4f4; /* White/light background for logos */
+  border-radius: 0.5rem;
+}
+
+.experience-img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 0.25rem;
+}
+
+.experience-text-container {
+  flex: 1; /* Allows text to take up remaining space */
+}

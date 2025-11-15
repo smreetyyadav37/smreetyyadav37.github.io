@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Experience - Smriti Yadav</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="mediaqueries.css" />
+  </head>
+  <body>
+    <nav id="desktop-nav">
+      <div class="logo">Smriti Yadav</div>
+      <div>
+        <ul class="nav-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="experience.html" class="active">Experience</a></li>
+          <li><a href="skills.html">Skills</a></li>
+          <li><a href="projects.html">Projects</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+    </nav>
+
+    <nav id="hamburger-nav">
+      <div class="logo">Smriti Yadav</div>
+      <div class="hamburger-menu">
+        <div class="hamburger-icon" onclick="toggleMenu()">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+        <div class="menu-links">
+          <li><a href="index.html" onclick="toggleMenu()">Home</a></li>
+          <li><a href="about.html" onclick="toggleMenu()">About</a></li>
+          <li>
+            <a href="experience.html" onclick="toggleMenu()" class="active"
+              >Experience</a
+            >
+          </li>
+          <li><a href="skills.html" onclick="toggleMenu()">Skills</a></li>
+          <li><a href="projects.html" onclick="toggleMenu()">Projects</a></li>
+          <li><a href="contact.html" onclick="toggleMenu()">Contact</a></li>
+        </div>
+      </div>
+    </nav>
+
+    <section id="experience">
+      <p class="section__text__p1">Explore My</p>
+      <h1 class="title">Work Experience</h1>
+
+      <div class="experience-details-container">
+        <div class="experience-card">
+          <div class="experience-img-container">
+            <img
+              src="./assets/ISRO.png"
+              alt="ISRO Logo"
+              class="experience-img"
+            />
+          </div>
+          <div class="experience-text-container">
+            <h3>SRTD Intern</h3>
+            <p class="sub-title">
+              Space Applications Centre (SAC), ISRO, Ahmedabad, Gujarat
+            </p>
+            <p class="dates">July 2025 – October 2025</p>
+            <ul>
+              <li>
+                Analyzing satellite radar imagery to extract and classify
+                meaningful patterns using geospatial features and
+                domain-specific characteristics.
+              </li>
+              <li>
+                Building a machine learning-based model for effective
+                differentiation of SAR images, contributing to automated image
+                interpretation workflows for remote sensing applications.
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="experience-card">
+          <div class="experience-img-container">
+            <img
+              src="./assets/DRDO.png"
+              alt="DRDO Logo"
+              class="experience-img"
+            />
+          </div>
+          <div class="experience-text-container">
+            <h3>R&D Intern</h3>
+            <p class="sub-title">
+              INMAS, DRDO, Ministry Of Defence, Govt. Of India, New Delhi
+            </p>
+            <p class="dates">June 2024 - August 2024</p>
+            <ul>
+              <li>
+                Developed immersive VR simulation models leveraging advanced
+                programming and 3D modeling techniques, enabling realistic and
+                interactive virtual environments for enhanced user
+                engagement.
+              </li>
+              <li>
+                Managed and processed large datasets efficiently using Python,
+                ensuring smooth integration of data with VR simulations and
+                enabling real-time adaptability and insights.
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <div class="footer-socials">
+        <a href="https://github.com/smreetyyadav37" target="_blank">
+          <img
+            src="./assets/github.png"
+            alt="Github"
+            class="icon footer-icon"
+          />
+        </a>
+        <a
+          href="https://www.linkedin.com/in/smriti-yadav-33544324b"
+          target="_blank"
+        >
+          <img
+            src="./assets/linkedin.png"
+            alt="LinkedIn"
+            class="icon footer-icon"
+          />
+        </a>
+      </div>
+      <p class="footer-text">Designed & Built by Smriti Yadav</p>
+      <p>Copyright &#169; 2025 Smriti Yadav. All Rights Reserved.</p>
+    </footer>
+    <script src="script.js"></script>
+  </body>
+</html>

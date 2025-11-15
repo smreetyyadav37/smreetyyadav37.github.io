@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Projects - Smriti Yadav</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="mediaqueries.css" />
+  </head>
+  <body>
+    <nav id="desktop-nav">
+      <div class="logo">Smriti Yadav</div>
+      <div>
+        <ul class="nav-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="experience.html">Experience</a></li>
+          <li><a href="skills.html">Skills</a></li>
+          <li><a href="projects.html" class="active">Projects</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+    </nav>
+
+    <nav id="hamburger-nav">
+      <div class="logo">Smriti Yadav</div>
+      <div class="hamburger-menu">
+        <div class="hamburger-icon" onclick="toggleMenu()">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+        <div class="menu-links">
+          <li><a href="index.html" onclick="toggleMenu()">Home</a></li>
+          <li><a href="about.html" onclick="toggleMenu()">About</a></li>
+          <li><a href="experience.html" onclick="toggleMenu()">Experience</a></li>
+          <li><a href="skills.html" onclick="toggleMenu()">Skills</a></li>
+          <li>
+            <a href="projects.html" onclick="toggleMenu()" class="active"
+              >Projects</a
+            >
+          </li>
+          <li><a href="contact.html" onclick="toggleMenu()">Contact</a></li>
+        </div>
+      </div>
+    </nav>
+
+    <section id="projects">
+      <p class="section__text__p1">Browse My Recent</p>
+      <h1 class="title">Projects</h1>
+      <div class="project-card-container">
+        <div class="details-container color-container project-card">
+          <div class="project-img-container">
+            <img
+              src="./assets/Project1.png"
+              alt="Context-Aware Q&A Project"
+              class="project-img"
+            />
+          </div>
+          <h2 class="project-title">Context-Aware Q&A with RAG Architecture</h2>
+          <ul>
+            <li>
+              Developed a full-stack AI application using the RAG
+              (Retrieval-Augmented Generation) architecture to provide
+              fact-based, verifiable answers from user-provided documents,
+              eliminating LLM hallucinations.
+            </li>
+            <li>
+              Engineered a Python backend with FastAPI and LangChain,
+              integrating Pinecone for vector storage, Google Gemini for
+              embeddings and generation, and Cohere for advanced result
+              reranking.
+            </li>
+            <li>
+              Built a responsive React (Vite) frontend and deployed the full
+              application to the cloud using Vercel and Render, establishing a
+              complete CI/CD pipeline.
+            </li>
+          </ul>
+          <div class="btn-container">
+            <button
+              class="btn btn-color-2 project-btn"
+              onclick="location.href='https://github.com/smreetyyadav37/mini-rag-website'"
+            >
+              Github
+            </button>
+            <button
+              class="btn btn-color-2 project-btn"
+              onclick="location.href='https://mini-rag-website.vercel.app/'"
+            >
+              Live Demo
+            </button>
+          </div>
+        </div>
+
+        <div class="details-container color-container project-card">
+          <div class="project-img-container">
+            <img
+              src="./assets/Project2.png"
+              alt="Wildlife Conservation Project"
+              class="project-img"
+            />
+          </div>
+          <h2 class="project-title">Wildlife Conservation using AI</h2>
+          <ul>
+            <li>
+              Developing an AI-based system for bird species classification and
+              migration pattern analysis using the BIRDS 525 and eBird
+              datasets.
+            </li>
+            <li>
+              Implementing deep learning models like CNNs and Transformers to
+              identify bird species and track spatiotemporal migration trends
+              for conservation insights.
+            </li>
+            <li>
+              Integrating data visualization and analytics to assess the impact
+              on biodiversity and support SDG Goal 15 (Life on Land).
+            </li>
+          </ul>
+          <div class="btn-container">
+            <button
+              class="btn btn-color-2 project-btn"
+              onclick="location.href='https://github.com/smreetyyadav37'"
+            >
+              Github
+            </button>
+            <button
+              class="btn btn-color-2 project-btn"
+              onclick="location.href=''"
+            >
+              Ongoing
+            </button>
+          </div>
+        </div>
+
+        <div class="details-container color-container project-card">
+          <div class="project-img-container">
+            <img
+              src="./assets/Project3.png"
+              alt="Pharmaceutical Website Project"
+              class="project-img"
+            />
+          </div>
+          <h2 class="project-title">Full-Stack Pharmaceutical Website</h2>
+          <ul>
+            <li>
+              Developed a visually rich and fully responsive Ayurvedic
+              pharmaceutical website using React.js (Vite), Tailwind CSS, and
+              GSAP, focused on promoting holistic wellness through an immersive
+              user experience.
+            </li>
+            <li>
+              Built modular sections for Home, About, Products, and Contact,
+              incorporating smooth UI interactions, responsive layouts, and
+              mobile-first design.
+            </li>
+            <li>
+              Ensured fast load times and clean architecture using Vite’s
+              lightning-fast development environment.
+            </li>
+          </ul>
+          <div class="btn-container">
+            <button
+              class="btn btn-color-2 project-btn"
+              onclick="location.href='https://github.com/smreetyyadav37/ayurveda'"
+            >
+              Github
+            </button>
+            <button
+              class="btn btn-color-2 project-btn"
+              onclick="location.href='https://drive.google.com/file/d/1nSdnci7cIVuolkOGLkb2mQqppxyO709S/view'"
+            >
+              Live Demo
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <div class="footer-socials">
+        <a href="https://github.com/smreetyyadav37" target="_blank">
+          <img
+            src="./assets/github.png"
+            alt="Github"
+            class="icon footer-icon"
+          />
+        </a>
+        <a
+          href="https://www.linkedin.com/in/smriti-yadav-33544324b"
+          target="_blank"
+        >
+          <img
+            src="./assets/linkedin.png"
+            alt="LinkedIn"
+            class="icon footer-icon"
+          />
+        </a>
+      </div>
+      <p class="footer-text">Designed & Built by Smriti Yadav</p>
+      <p>Copyright &#169; 2025 Smriti Yadav. All Rights Reserved.</p>
+    </footer>
+    <script src="script.js"></script>
+  </body>
+</html>
