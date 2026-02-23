@@ -1,92 +1,261 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+<head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Smriti Yadav - Portfolio</title>
+    <title>Smriti Yadav | Portfolio</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Modak&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
     <link rel="stylesheet" href="style.css" />
-    <link rel="stylesheet" href="mediaqueries.css" />
-  </head>
-  <body>
-    <nav id="desktop-nav">
-      <div class="logo">Smriti Yadav</div>
-      <div>
-        <ul class="nav-links">
-          <li><a href="index.html" class="active">Home</a></li>
-          <li><a href="about.html">About</a></li>
-          <li><a href="experience.html">Experience</a></li>
-          <li><a href="skills.html">Skills</a></li>
-          <li><a href="projects.html">Projects</a></li>
-          <li><a href="contact.html">Contact</a></li>
-        </ul>
-      </div>
-    </nav>
+</head>
+<body data-theme="dark">
 
-    <nav id="hamburger-nav">
-      <div class="logo">Smriti Yadav</div>
-      <div class="hamburger-menu">
-        <div class="hamburger-icon" onclick="toggleMenu()">
-          <span></span>
-          <span></span>
-          <span></span>
-        </div>
-        <div class="menu-links">
-          <li><a href="index.html" onclick="toggleMenu()" class="active">Home</a></li>
-          <li><a href="about.html" onclick="toggleMenu()">About</a></li>
-          <li><a href="experience.html" onclick="toggleMenu()">Experience</a></li>
-          <li><a href="skills.html" onclick="toggleMenu()">Skills</a></li>
-          <li><a href="projects.html" onclick="toggleMenu()">Projects</a></li>
-          <li><a href="contact.html" onclick="toggleMenu()">Contact</a></li>
-        </div>
-      </div>
-    </nav>
+    <button class="theme-toggle" id="themeToggleBtn" aria-label="Toggle Theme">
+        ☀️
+    </button>
 
-    <section id="profile">
-      <div class="section__pic-container">
-        <img src="./assets/profile-pic.png" alt="Smriti Yadav profile picture" />
-      </div>
-      <div class="section__text">
-        <p class="section__text__p1">Hello, I'm</p>
-        <h1 class="title">Smriti Yadav</h1>
-        <p class="section__text__p2">an aspiring Software Engineer</p>
-        <div class="btn-container">
-          <button
-            class="btn btn-color-2"
-            onclick="window.open('./assets/Resume.pdf')"
-          >
-            Download Resume
-          </button>
-          <button class="btn btn-color-1" onclick="location.href='contact.html'">
-            Contact Info
-          </button>
-        </div>
-      </div>
-    </section>
+    <div class="layout-wrapper">
+        <aside class="sidebar">
+            <div class="profile-container">
+                <img src="./assets/profile-pic.jpeg" alt="Smriti Yadav" class="profile-pic" />
+                <h1 class="logo-name">Smriti<br>Yadav</h1>
+                <p class="role">Writing code that scales so I can fund my travel addiction.</p>
+                
+                <div class="sidebar-btn-container">
+                    <button class="btn btn-outline" onclick="window.open('./assets/Resume.pdf')">Resume</button>
+                </div>
+            </div>
 
-    <footer>
-      <div class="footer-socials">
-        <a href="https://github.com/smreetyyadav37" target="_blank">
-          <img
-            src="./assets/github.png"
-            alt="Github"
-            class="icon footer-icon"
-          />
-        </a>
-        <a
-          href="https://www.linkedin.com/in/smriti-yadav-33544324b"
-          target="_blank"
-        >
-          <img
-            src="./assets/linkedin.png"
-            alt="LinkedIn"
-            class="icon footer-icon"
-          />
-        </a>
-      </div>
-      <p class="footer-text">Designed & Built by Smriti Yadav</p>
-      <p>Copyright &#169; 2025 Smriti Yadav. All Rights Reserved.</p>
-    </footer>
+            <nav class="nav-links">
+                <a href="#about" class="nav-link active">About</a>
+                <a href="#experience" class="nav-link">Experience</a>
+                <a href="#skills" class="nav-link">Skills</a>
+                <a href="#projects" class="nav-link">Projects</a>
+                <a href="#contact" class="nav-link">Contact</a>
+            </nav>
+
+            <div class="sidebar-socials">
+                <a href="https://github.com/smreetyyadav37" target="_blank">
+                    <img src="./assets/github.png" alt="Github" class="icon" />
+                </a>
+                <a href="https://www.linkedin.com/in/smriti-yadav-33544324b" target="_blank">
+                    <img src="./assets/linkedin.png" alt="LinkedIn" class="icon" />
+                </a>
+            </div>
+        </aside>
+
+        <main class="main-content">
+            
+            <section id="about" class="content-section">
+                <h2 class="section-title">About Me</h2>
+                <div class="about-content">
+                    <div class="text-container">
+                        <p>
+                           Hi, I’m Smriti Yadav, a data-driven Software Engineer passionate about scalable backend systems, intelligent AI/ML models, and modern DevOps. Currently completing my B.Tech in IT at Manipal University Jaipur, my journey in tech revolves around bridging infrastructure and AI. From engineering high-throughput ETL pipelines to optimizing data research for ISRO and DRDO, I love building systems that solve complex problems. When I'm not writing code, you can usually find me traveling to new destinations, exploring different cultures, and hunting down the best local food!
+                        </p>
+                    </div>
+                    
+                    <h4>Education</h4>
+                    <div class="education-grid">
+                        <div class="card">
+                            <h4 class="sub-item-title">B.Tech, Information Technology</h4>
+                            <p class="school">Manipal University Jaipur</p>
+                            <p class="dates">2022 - 2026 | CGPA: 7.92/10</p>
+                        </div>
+                        <div class="card">
+                            <h4 class="sub-item-title">Class 12th (CBSE)</h4>
+                            <p class="school">Lucknow Public School</p>
+                            <p class="dates">2020 - 2021 | 90.4%</p>
+                        </div>
+                        <div class="card">
+                            <h4 class="sub-item-title">Class 10th (CBSE)</h4>
+                            <p class="school">Lucknow Public School</p>
+                            <p class="dates">2018 - 2019 | 97.2%</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="experience" class="content-section">
+                <h2 class="section-title">Experience</h2>
+                <div class="cards-container">
+                    
+                    <div class="card flex-card">
+                        <div class="img-container">
+                            <img src="./assets/ISRO.png" alt="ISRO Logo" class="company-img" />
+                        </div>
+                        <div class="card-text">
+                            <h4>SRTD Intern</h4>
+                            <p class="highlight">Space Applications Centre (SAC), ISRO</p>
+                            <p class="dates">July 2025 – October 2025</p>
+                            <ul>
+                                <li>Analyzing satellite radar imagery to extract and classify meaningful patterns using geospatial features and domain-specific characteristics.</li>
+                                <li>Building a machine learning-based model for effective differentiation of SAR images, contributing to automated image interpretation workflows for remote sensing applications.</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="card flex-card">
+                        <div class="img-container">
+                            <img src="./assets/DRDO.png" alt="DRDO Logo" class="company-img" />
+                        </div>
+                        <div class="card-text">
+                            <h4>R&D Intern</h4>
+                            <p class="highlight">INMAS, DRDO, Ministry Of Defence</p>
+                            <p class="dates">June 2024 - August 2024</p>
+                            <ul>
+                                <li>Developed immersive VR simulation models leveraging advanced programming and 3D modeling techniques, enabling realistic and interactive virtual environments for enhanced user engagement.</li>
+                                <li>Managed and processed large datasets efficiently using Python, ensuring smooth integration of data with VR simulations and enabling real-time adaptability and insights.</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                </div>
+            </section>
+
+            <section id="skills" class="content-section">
+                <h2 class="section-title">Skills</h2>
+                <div class="skills-grid">
+                    <div class="skills-grid">
+    <div class="card">
+        <h4>Languages & Web</h4>
+        <p><strong>Languages:</strong> Python, JavaScript, TypeScript, HTML/CSS</p>
+        <p><strong>Frameworks:</strong> React (Vite), Node.js</p>
+        <p><strong>Data Analytics:</strong> Google Data Analytics Certified, Power BI, Tableau</p>
+    </div>
+    <div class="card">
+        <h4>Backend & Databases</h4>
+        <p><strong>Frameworks:</strong> Django, RESTful APIs, Microservices</p>
+        <p><strong>Relational:</strong> SQL, PostgreSQL, MySQL</p>
+        <p><strong>NoSQL & Cloud:</strong> MongoDB Atlas, AWS DynamoDB</p>
+    </div>
+    <div class="card">
+        <h4>DevOps & System Design</h4>
+        <p><strong>Architecture:</strong> Microservices, Event-Driven Design, Load Balancing, CDNs</p>
+        <p><strong>Infrastructure:</strong> Docker, Kubernetes, AWS, Azure, Linux/Unix, Bash Scripting</p>
+        <p><strong>Pipelines & Queues:</strong> CI/CD (Jenkins, GitHub Actions), Kafka, Redis</p>
+    </div>
+    <div class="card">
+        <h4>AI / Machine Learning</h4>
+        <p><strong>Core AI:</strong> GenAI, RAG Architectures, Agentic Workflows, NLP (Hugging Face)</p>
+        <p><strong>Libraries:</strong> PyTorch, Scikit-learn, NumPy, Pandas, OpenCV</p>
+        <p><strong>Automation:</strong> n8n, Jupyter, Google Colab</p>
+    </div>
+</div>
+                </div>
+            </section>
+
+            <section id="projects" class="content-section">
+                <h2 class="section-title">Projects</h2>
+                <div class="projects-grid">
+                     
+                    <div class="card project-card">
+                        <div class="project-img-wrapper">
+                            <img src="./assets/Project4.png" alt="PyWarp-Data Gateway & ETL Pipeline" />
+                        </div>
+                        <h4>PyWarp-Data Gateway & ETL Pipeline</h4>
+                        <p>A secure, high-performance ETL pipeline designed to redact PII and normalize chaotic log data for seamless integration with downstream AI and SIEM platforms.</p>
+                        <div class="project-btns">
+                            <a href="https://github.com/smreetyyadav37/pywarp" target="_blank" class="btn btn-outline">GitHub</a>
+                            <a href="https://pywarp-gateway.onrender.com/" target="_blank" class="btn btn-filled">Live Demo</a>
+                        </div>
+                    </div>
+                    
+                    <div class="card project-card">
+                        <div class="project-img-wrapper">
+                            <img src="./assets/Project1.png" alt="Context-Aware Q&A Project" />
+                        </div>
+                        <h4>Context-Aware Q&A with RAG Architecture</h4>
+                        <p>Developed a full-stack AI application using RAG architecture to provide fact-based answers, integrating LangChain, Pinecone, and Google Gemini.</p>
+                        <div class="project-btns">
+                            <a href="https://github.com/smreetyyadav37/mini-rag-website" target="_blank" class="btn btn-outline">GitHub</a>
+                            <a href="https://mini-rag-website.vercel.app/" target="_blank" class="btn btn-filled">Live Demo</a>
+                        </div>
+                    </div>
+
+                    <div class="card project-card">
+                        <div class="project-img-wrapper">
+                            <img src="./assets/Project5.png" alt="Credit Approval System" />
+                        </div>
+                        <h4>Credit Approval System-Backend</h4>
+                        <p>This is a backend system for a credit approval app built with Django, Django Rest Framework (DRF), Celery, and PostgreSQL. It is fully dockerized.</p>
+                        <div class="project-btns">
+                            <a href="https://github.com/smreetyyadav37/credit-approval-system" target="_blank" class="btn btn-outline">GitHub</a>
+                        </div>
+                    </div>
+
+                    <div class="card project-card">
+                        <div class="project-img-wrapper">
+                            <img src="./assets/Project2.png" alt="Wildlife Conservation Project" />
+                        </div>
+                        <h4>Wildlife Conservation using AI</h4>
+                        <p>Developing an AI system for bird species classification and migration pattern analysis using deep learning models (CNNs/Transformers) on eBird datasets.</p>
+                        <div class="project-btns">
+                            <a href="https://github.com/smreetyyadav37" target="_blank" class="btn btn-outline">GitHub</a>
+                        </div>
+                    </div>
+
+                    <div class="card project-card">
+                        <div class="project-img-wrapper">
+                            <img src="./assets/Project3.png" alt="Pharmaceutical Website Project" />
+                        </div>
+                        <h4>Full-Stack Pharmaceutical Website</h4>
+                        <p>Built a responsive Ayurvedic pharmaceutical website using React.js (Vite), Tailwind CSS, and GSAP, focused on an immersive UI/UX experience.</p>
+                        <div class="project-btns">
+                            <a href="https://github.com/smreetyyadav37/ayurveda" target="_blank" class="btn btn-outline">GitHub</a>
+                            <a href="https://drive.google.com/file/d/1nSdnci7cIVuolkOGLkb2mQqppxyO709S/view" target="_blank" class="btn btn-filled">Live Demo</a>
+                        </div>
+                    </div>
+
+                </div>
+            </section>
+
+            <section id="contact" class="content-section">
+                <h2 class="section-title">Contact</h2>
+                
+                <div class="contact-wrapper">
+                    <form id="contact-form" action="https://formspree.io/f/mblqgykg" method="POST" class="card form-card">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="name">Name</label>
+                                <input type="text" id="name" name="name" required />
+                            </div>
+                            <div class="form-group">
+                                <label for="email">Email</label>
+                                <input type="email" id="email" name="email" required />
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Message</label>
+                            <textarea id="message" name="message" rows="5" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-filled submit-btn">Send Message</button>
+                    </form>
+
+                    <div class="contact-direct">
+                        <div class="card direct-card">
+                            <img src="./assets/email.png" alt="Email icon" class="icon" />
+                            <a href="mailto:smreetyyadav@gmail.com">smreetyyadav@gmail.com</a>
+                        </div>
+                        <div class="card direct-card">
+                            <img src="./assets/linkedin.png" alt="LinkedIn icon" class="icon" />
+                            <a href="https://www.linkedin.com/in/smriti-yadav-33544324b" target="_blank">LinkedIn Profile</a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <footer>
+                <p>Designed & Built by Smriti Yadav. © 2025 All Rights Reserved.</p>
+            </footer>
+
+        </main>
+    </div>
+
     <script src="script.js"></script>
-  </body>
+</body>
 </html>
